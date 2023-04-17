@@ -1,0 +1,41 @@
+{% load static %}
+
+<section class="section-projects sec" id="projects">
+
+    <div class="container">
+        <span class="subheading">Projects</span>
+        <h2 class="heading-secondary">Through Hardwork effort Trail comes success</h2>
+
+    </div>
+
+
+    <div class="container grid grid--2--cols change">
+        {% for item in project  %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="project-preview">
+            <img class="preview" src="{{item.projectphoto.url}}" alt="Project-Image">
+        </div>
+        <div class="project-detail">
+            <p class="step-number">0{{forloop.counter}}</p>
+            <h3 class="heading-teritary">{{item.projectname}}</h3>
+            <p class="project-details">{{item.projectdescription}}</p>
+            <a class="btn btn--source" href="{{item.projecturl}}">Take me to source</a>
+        </div>
+        {% else %}
+        <div class="project-detail">
+            <p class="step-number">0{{forloop.counter}}</p>
+            <h3 class="heading-teritary">{{item.projectname}}</h3>
+            <p class="project-details">{{item.projectdescription}}</p>
+            <a class="btn btn--source" href="{{item.projecturl}}">Take me to source</a>
+        </div>
+        <div class="project-preview">
+            <img class="preview" src="{{item.projectphoto.url}}" alt="Project-Image">
+        </div>
+
+
+
+
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>

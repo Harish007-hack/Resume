@@ -1,0 +1,70 @@
+{% load static %}
+
+<section class="section-skills sec" id="skills">
+
+
+    <div class="container center-text">
+        <span class="subheading">Skills</span>
+        <h2 class="heading-secondary">Skills are the keys that unlock doors to success</h2>
+
+    </div>
+
+
+
+
+    <div class="container grid grid--3--cols margin-bottom-md">
+        {% for item in info %}
+        <div class="skill-card card box">
+            <div class="content">
+                <div class="front">
+                <img  class="skill-img" src="{{item.skillImg.url}}" alt="Python">
+                
+                <div class="skills">
+                <h3 class="heading-teritary center-text">{{item.skillLang}}</h3>
+                <ul class="list-item">
+                    <li class="item">{{item.skillLibrary_1}}</li>
+                    <li class="item">{{item.skillLibrary_2}}</li>
+                    <li class="item">{{item.skillLibrary_3}}</li>
+                    <li class="item">{{item.skillLibrary_4}}</li>
+                    {% comment %} <li class="item">PyGame</li>
+                    <li class="item">Selenium</li> {% endcomment %}
+                </ul>
+                </div>
+            </div>
+            <div class="back">
+                {% for i in item.certificates_set.all %}
+                <div class="resources">
+                    <img src="{{i.skillcertificate_logo.url}}" class="skill-logo" alt="skill-Image">
+                    <a href="{{i.skillcertificate_link}}" class="remove">{{i.skillcertificate_organiser}}</a>
+                </div>
+                {% endfor %}
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+        {% comment %} <div class="skill-card card box">
+            <div class="content">
+                <div class="front">
+                <img  class="skill-img" src="https://images.ctfassets.net/mrop88jh71hl/55rrbZfwMaURHZKAUc5oOW/9e5fe805eb03135b82e962e92169ce6d/python-programming-language.png?w=750&h=750&q=100&fm=png" alt="Python">
+                
+                <div class="skills">
+                <h3 class="heading-teritary center-text">Python</h3>
+                <ul class="list-item">
+                    <li class="item">Django</li>
+                    <li class="item">PyGame</li>
+                    <li class="item">Selenium</li>
+                </ul>
+                </div>
+            </div>
+            <div class="back">
+                <div class="resources">
+                    <img src="https://pbs.twimg.com/profile_images/1415325668787855361/nxZY4zVv_400x400.png" class="skill-logo" alt="skill-Image">
+                    <a href="https://www.udemy.com/certificate/UC-bac2da94-e451-4f5a-b710-790246f65122/" class="remove">Udmey</a>
+                </div>
+            </div>
+            </div>
+        </div> {% endcomment %}
+
+    </div>
+</section>

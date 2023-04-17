@@ -1,0 +1,32 @@
+{% load static %}
+
+<section class="section-cta sec" id="signup">
+    <div class="container">
+        <div class="cta">
+            <div class="sign-up">
+                <h3 class="heading-teritary margin-bottom-sm">Ready to be in the know? Join us by signing up today!</h3>
+                <p class="project-details">Don't miss a beat! Sign up now to stay in the loop and be the first to know about the latest updates. </p>
+                <form action="" class="form-sign" method="POST">
+                    {% csrf_token %}
+                    <div>
+                    <label for="fName">First Name</label>
+                    <input type="text" name="fName" id="fName" placeholder="First Name">
+                    </div>
+
+                    <div>
+                        <label for="lName">Last Name</label>
+                        <input type="text" name="lName" id="lName" placeholder="Last Name">
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="123@email.com">
+                    </div>
+                    <button class="btn btn--form">Sign up now</button>
+
+                </form>
+            </div>
+            <div class="sign-up-img" role="img"></div>
+        </div>
+    </div>
+</section>

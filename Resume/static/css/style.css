@@ -1,0 +1,455 @@
+/* 
+
+--- 01 TYPEOGRAPHY ASSIST
+
+FONT SIZE SYSTEM (px)
+     10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+FONT WEIGHT:
+DEFAULT: 400
+MEDIUM:500
+SEMI-BOLD:600
+BOLD:700
+
+
+LINE HEIGHT:
+DEFAULT: 1
+SMALL: 1.05
+PARAGRAPH DEFAULT: 1.6
+MEDIUM: 1.2
+LARGE: 1.8
+
+
+--- 02 COLOR
+
+PRIMARY: #e67e22
+
+TINTS:#fdf2e9
+#cf711f
+#fae5d3
+SHADES:
+ACCENTS:
+GREYS: #555
+#333
+#6f6f6f
+
+--- 03 SHADOWS 
+
+
+--- 04 BORDER RADIUS
+
+DEFAULTS: 9PX
+
+
+--- 05 WHITESPACES
+
+SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+
+
+
+/* MOBILE */
+.btn-mobile-nav{
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+
+}
+
+.icon-mobile-nav{
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #333;
+}
+
+.icon-mobile-nav[name=close-outline]{
+    display: none;
+}
+
+
+
+/*******************************************************************/
+/*HERO-SECTION*/
+/*******************************************************************/
+
+.section-hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.808),rgba(0, 0, 0, 0.514),rgb(143, 142, 142)), url("../image/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 4.8rem 0 9.6rem 0; /*always use padding when u have bg color */
+}
+
+
+
+.hero{
+    max-width: 130rem;
+    padding: 15rem 3.2rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 9.6rem;
+    align-items: center;
+    
+}
+
+.hero-img{
+    width: 100%;
+    opacity: 0.85;
+}
+
+.hero-description{
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 4.8rem;
+}
+
+
+/*******************************************************************/
+/*NAV-SECTION*/
+/*******************************************************************/
+.header-nav{
+    display: flex;
+    justify-content: end;
+}
+
+
+
+.item-list{
+    display: flex;
+    gap: 3.6rem;
+}
+
+.list{
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+.menu:link,
+.menu:visited{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: 2px solid transparent;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+.menu:active,
+.menu:hover{
+    border-bottom: 2px solid antiquewhite;
+}
+
+.menu:last-child{
+    margin-right: 3rem;
+}
+
+
+/*******************************************************************/
+/*SKILLS-SECTION*/
+/*******************************************************************/
+
+.skill-card{
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0,0, 0.075);
+    border-radius: 1.8rem;
+    overflow: hidden;
+    margin-top: 1.8rem;
+    perspective: 50rem;
+}
+
+
+.skill-img{
+    width: 50%;
+}
+
+.card{
+    width: 35rem;
+    height: 46rem;
+    perspective: 50rem;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  
+    transition: transform 1s ;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    transform: rotateY( 180deg );
+  }
+
+  .resources{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 5.6rem;
+    gap: 3.2rem;
+  }
+  .skill-logo{
+    width: 40px;
+    height: 40px;
+  }
+
+  .remove:link,
+  .remove:visited{
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #555;
+}
+
+.list-item{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.item{
+    font-size: 2rem;
+    list-style: none;
+}
+
+
+/*******************************************************************/
+/*PROJECT-SECTION*/
+/*******************************************************************/
+
+.project-preview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* .project-preview::before,
+.project-preview::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: antiquewhite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+.project-preview::after{
+    width: 90%;
+    padding-bottom: 90%;
+    background-color: rgba(245, 219, 186, 0.89);
+} */
+
+.preview{
+    width: 100%;
+}
+
+
+
+.details{
+    font-size: 1.8rem;
+    margin-top: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+.project-details{
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 3.6rem;
+}
+
+.step-number{
+    font-size: 9.8rem;
+    font-weight: 600;
+    color: #ddd;
+    margin-bottom: 1.2rem;
+
+}
+
+.change{
+    row-gap: 3.6rem;
+    column-gap: 3.6rem;
+}
+
+/*******************************************************************/
+/*ABOUT-ME-SECTION*/
+/*******************************************************************/
+.image-container{
+    justify-self: center;
+    margin-bottom: 3.6rem;
+}
+
+.myimg{
+    width: 30rem;
+    height: 30rem;
+    border-radius: 1.8rem;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    perspective: 50rem;
+    transition: transform 1s;
+    margin-top: 3.2rem;
+
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.384);
+    
+}
+
+.myimg:hover{
+    transform:scale(1.5)
+}
+
+.my-description{
+    padding: 3.6rem 0;
+    border-radius: 1.8rem;
+    margin-bottom: 3.2rem;
+}
+
+
+
+/*******************************************************************/
+/*FOOTER-SECTION*/
+/*******************************************************************/
+
+.icon{
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.icon-edit:link,
+.icon-edit:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.icon:hover{
+    color: #a1a1a1;
+}
+
+.Links{
+    justify-self: start;
+}
+
+.icon-box{
+    display: flex;
+    column-gap: 2.4rem;
+    row-gap: 2.4rem;
+}
+
+.Tools{
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+}
+
+.copyights{
+    grid-column: 1 / -1;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    justify-self: center;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.856);
+    color: #dad4d4;
+    padding: 3.2rem; 
+    border-top: 1px solid #b90c0c;
+}
+
+
+.gap{
+    row-gap: 7.6rem;
+}
+
+
+
+/*******************************************************************/
+/*SIGN-UP-SECTION*/
+/*******************************************************************/
+
+.sign-up-img{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.39),rgba(0, 0, 0, 0.548)), url("../image/bg-4.jpg");
+    background-position: left;
+    background-size: cover;
+    border-end-end-radius: 2rem;
+    border-start-end-radius: 2rem;
+    overflow: hidden;
+
+}
+
+.sign-up{
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    color: #45260a;
+    margin-bottom: 4.8rem;
+}
+
+
+.cta{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: antiquewhite;
+    border-radius: 2rem;
+    
+}
+
+.cta *:focus{
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(233, 238, 253, 0.5);
+}
+
+.form-sign{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+
+.form-sign label{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.form-sign input{
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 0.9rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+}
+
+.form-sign input::placeholder{
+    color: #6f6f6f;
+}

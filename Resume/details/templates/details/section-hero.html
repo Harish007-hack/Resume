@@ -1,0 +1,26 @@
+{% load static %}
+
+
+<section class="section-hero">
+
+    {% include 'details/nav.html' %}
+
+
+    <div class="hero">
+        <div class="hero-text-box">
+            <h1 class="heading-primary">Great Skills Lead to Great Jobs</h1>
+            <p class="hero-description">
+                Are you looking for a reliable and competent professional to join your team? Look no further! With years of
+                 experience in various industries,
+                  I have honed my skills in Python, Web-Development, and Game-Development with C++.
+            </p>
+
+            <a class="btn btn--main" href="#projects">Explore</a>
+            <a class="btn btn--side" href="#skills">Show Me More</a>
+            
+        </div>
+        <div class="hero-img-box">
+            <img src="{% static 'image/side.jpg' %}" class="hero-img" alt="Work">
+        </div>
+    </div>
+</section>
